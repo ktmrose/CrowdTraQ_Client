@@ -74,14 +74,14 @@ app.component('dash-board', {
 
 function sendSongRequest (connection, tokens, trackId) {
 
-    let message = JSON.stringify({"userId" : connection.userId, "tokens" : tokens, "trackID" : trackId})
+    let message = JSON.stringify({"UserId" : connection.userId, "tokens" : tokens, "trackID" : trackId})
     // console.log("userId: " + userId);
     connection.send(message)
     console.log("Message sent: " + message)
 }
 
 function sendReaction (connection, reaction) {
-    let message = JSON.stringify({"userID" : connection.userId, "likesSong" : reaction})
+    let message = JSON.stringify({"UserID" : connection.userId, "likesSong" : reaction})
     // console.log(connection)
     connection.send(message)
     console.log("Reaction sent: " + message)
