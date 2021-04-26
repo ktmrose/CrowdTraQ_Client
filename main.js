@@ -43,6 +43,12 @@ const app = Vue.createApp({
 
                 tokens = message.Tokens
                 console.log("Tokens: " + tokens)
+            }else if (message.Push_State !== undefined) {
+
+                console.log(message)
+                if (message.Push_State == 0) {
+                    document.getElementsByClassName("img-row").style.display = "block"
+                }
             } else {
                 console.log(message)
             }

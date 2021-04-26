@@ -63,11 +63,14 @@ app.component('dash-board', {
         hotBtnClick() {
             console.log("Hot button clicked")
             sendReaction(this.connection,  true)
+            //TODO: hide reaction images
         },
 
         notBtnClick() {
             console.log("Not button clicked")
             sendReaction(this.connection, false)
+            //TODO: hide reaction images
+            document.getElementsByClassName("img-row").style.display = "none"
         }
     }
 })
