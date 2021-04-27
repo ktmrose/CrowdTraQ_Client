@@ -65,6 +65,7 @@ app.component('dash-board', {
             sendReaction(this.connection,  true)
             //TODO: hide reaction images
             document.getElementsByClassName("img-col")[0].style.display = "none"
+            document.getElementsByClassName("img-col")[1].style.display = "none"
         },
 
         notBtnClick() {
@@ -72,6 +73,7 @@ app.component('dash-board', {
             sendReaction(this.connection, false)
             //TODO: hide reaction images
             document.getElementsByClassName("img-col")[0].style.display = "none"
+            document.getElementsByClassName("img-col")[1].style.display = "none"
         }
     }
 })
