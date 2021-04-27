@@ -3,6 +3,7 @@ body {
     margin: 0px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     letter-spacing: 3px;
+    font-size: xx-large;
     color: #45f4fd;
     text-align: center;
 }
@@ -17,10 +18,9 @@ body {
   }
 
   .logo {
-    display: block;
+    display: inline-block;
     margin-left: auto;
     margin-right: auto;
-    width: 35%;
     padding: 8px;
   }
 
