@@ -47,7 +47,7 @@ const app = Vue.createApp({
 
                 console.log(message)
                 if (message.Push_State == 0) {
-                    document.getElementsByClassName("img-row")[0].style.display = "block"
+                    document.getElementsByClassName("img-col")[0].style.display = "block"
                     document.getElementsByClassName("img-col")[1].style.display = "block"
                 }
             } else {
