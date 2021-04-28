@@ -47,8 +47,8 @@ const app = Vue.createApp({
 
                 console.log(message)
                 if (message.Push_State == 0) {
-                    document.getElementsByClassName("img-col")[0].style.display = "block"
-                    document.getElementsByClassName("img-col")[1].style.display = "block"
+                    document.getElementsByClassName("img-col")[0].style.display = "inline-block"
+                    document.getElementsByClassName("img-col")[1].style.display = "inline-block"
                 }
             } else {
                 console.log(message)
