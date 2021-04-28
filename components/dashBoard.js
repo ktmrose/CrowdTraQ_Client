@@ -11,15 +11,13 @@ app.component('dash-board', {
     },
     data () {
         return {
-            // tokens: 10,
             requestingSong: false,
             submittedFeedback: false,
         }
     },
     template: 
     /*html*/
-    `<p> Tokens: {{this.tokens}}</p>
-    <div
+    `<div
         class="img-row">
         <p>How do you like the currently playing song?</p>
         <div class="img-col">
