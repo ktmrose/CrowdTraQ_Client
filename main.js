@@ -53,7 +53,6 @@ const app = Vue.createApp({
                 document.getElementById("numTokens").innerText = this.tokens
             }else if (message.Push_State !== undefined) {
 
-                console.log(message)
                 if (message.Push_State == 0) {
                     document.getElementsByClassName("img-col")[0].style.display = "inline-block"
                     document.getElementsByClassName("img-col")[1].style.display = "inline-block"

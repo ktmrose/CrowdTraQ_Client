@@ -15,6 +15,9 @@
                 <img src="./assets/CrowdTraQLogo.png">
             </div>
             
+            <p> Tokens: </p>
+            <p id="numTokens"></p>
+            
             <div 
                 id="room_code_display"
                 v-if="!hasSubmitted">
@@ -35,9 +38,7 @@
 
             <!-- add more components here -->
             <div v-else>
-                    <p> Tokens: </p>
-                    <!-- in case this doesn't work -->
-                    <p id="numTokens"></p>
+
                     <dash-board :connection="connection" :tokens="tokens"></dash-board>
             </div>
         </div>
