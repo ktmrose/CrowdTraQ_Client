@@ -30,7 +30,9 @@ const app = Vue.createApp({
             this.roomCodes[index].numUsers += 1
             document.getElementById("numTokens").innerText = this.tokens
         },
-
+        setTokens(numTokens) {
+            this.tokens = numTokens
+        }
     },
     created: function () {
         console.log("Starting connection to WebSocket Server")
@@ -56,6 +58,13 @@ const app = Vue.createApp({
                 if (message.Push_State == 0) {
                     document.getElementsByClassName("img-col")[0].style.display = "inline-block"
                     document.getElementsByClassName("img-col")[1].style.display = "inline-block"
+                }
+            }else if (message.Error !== undefined) {
+                switch(message.Error) {
+                    case 0: 
+                        alert("Not enough tokens to add to queue!")
+                    case 1:
+                        alert("Song already in queue!")
                 }
             } else {
                 console.log(message)
