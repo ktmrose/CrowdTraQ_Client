@@ -11,6 +11,11 @@ const app = Vue.createApp({
             tokens: 10
         }
     },
+    computed: {
+        userTokens: function () {
+            return this.tokens
+        }
+    },
     methods: {
         addRoom(roomName) {
             roomCodes.push( {
@@ -23,7 +28,8 @@ const app = Vue.createApp({
             this.selectedRoomId = index
             this.hasSubmitted = true
             this.roomCodes[index].numUsers += 1
-        }
+        },
+
     },
     created: function () {
         console.log("Starting connection to WebSocket Server")
@@ -43,7 +49,6 @@ const app = Vue.createApp({
 
                 this.tokens = message.Tokens
                 console.log("Tokens: " + this.tokens)
-                this.$emit('update-tokens', this.tokens)
             }else if (message.Push_State !== undefined) {
 
                 console.log(message)
