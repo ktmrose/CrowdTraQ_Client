@@ -15,8 +15,8 @@
                 <img src="./assets/CrowdTraQLogo.png">
             </div>
             
-            <!-- <p> Tokens: </p>
-            <p id="numTokens"></p> -->
+            <p> Tokens: </p>
+            <p id="numTokens"></p>
 
             <div 
                 id="room_code_display"
@@ -38,8 +38,8 @@
 
             <!-- add more components here -->
             <div v-else>
-                <p> Tokens: {{ userTokens }}</p>
-                <p id="numTokens"></p>
+                <!-- <p> Tokens: {{ userTokens }}</p>
+                <p id="numTokens"></p> -->
                 <dash-board :connection="connection" :tokens="tokens"></dash-board>
             </div>
         </div>
