@@ -12,8 +12,9 @@ const app = Vue.createApp({
         }
     },
     computed: {
-        userTokens: function () {
-            return this.tokens
+        userTokens: function (numTokens) {
+            this.tokens = numTokens
+            return numTokens
         }
     },
     methods: {
@@ -52,7 +53,9 @@ const app = Vue.createApp({
 
                 this.tokens = message.Tokens
                 console.log("Tokens: " + this.tokens)
-                document.getElementById("numTokens").innerText = this.tokens
+                // app.setTokens(this.tokens)
+                app.userTokens(this.tokens)
+                // document.getElementById("numTokens").innerText = this.tokens
             }else if (message.Push_State !== undefined) {
 
                 if (message.Push_State == 0) {
