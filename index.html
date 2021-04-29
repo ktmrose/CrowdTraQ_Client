@@ -35,7 +35,9 @@
 
             <!-- add more components here -->
             <div v-else>
-                    <p> Tokens: {{ userTokens }}</p>
+                    <p> Tokens: </p>
+                    <!-- in case this doesn't work -->
+                    <p id="numTokens"></p>
                     <dash-board :connection="connection" :tokens="tokens"></dash-board>
             </div>
         </div>

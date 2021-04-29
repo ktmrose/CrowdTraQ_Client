@@ -28,6 +28,7 @@ const app = Vue.createApp({
             this.selectedRoomId = index
             this.hasSubmitted = true
             this.roomCodes[index].numUsers += 1
+            document.getElementById("numTokens").innerText = this.tokens
         },
 
     },
@@ -49,6 +50,7 @@ const app = Vue.createApp({
 
                 this.tokens = message.Tokens
                 console.log("Tokens: " + this.tokens)
+                document.getElementById("numTokens").innerText = this.tokens
             }else if (message.Push_State !== undefined) {
 
                 console.log(message)
