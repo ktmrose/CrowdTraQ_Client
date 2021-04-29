@@ -43,7 +43,7 @@ const app = Vue.createApp({
 
                 this.tokens = message.Tokens
                 console.log("Tokens: " + this.tokens)
-                console.log(app.$data)
+                this.$emit('update-tokens', this.tokens)
             }else if (message.Push_State !== undefined) {
 
                 console.log(message)
