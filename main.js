@@ -43,7 +43,7 @@ const app = Vue.createApp({
                 console.log("Your assigned userID: " + this.userId);
             } else if (message.Tokens !== undefined){
 
-                self.data().tokens = message.Tokens
+                self.tokens = message.Tokens
                 // this.tokens = message.Tokens
                 console.log("Tokens: " + this.tokens)
                 document.getElementById("numTokens").innerText = this.tokens
