@@ -11,12 +11,6 @@ const app = Vue.createApp({
             tokens: 10
         }
     },
-    computed: {
-        userTokens: function (numTokens) {
-            this.tokens = numTokens
-            return numTokens
-        }
-    },
     methods: {
         addRoom(roomName) {
             roomCodes.push( {
@@ -30,12 +24,10 @@ const app = Vue.createApp({
             this.hasSubmitted = true
             this.roomCodes[index].numUsers += 1
             document.getElementById("numTokens").innerText = this.tokens
-        },
-        setTokens(numTokens) {
-            this.tokens = numTokens
         }
     },
     created: function () {
+        let self = this
         console.log("Starting connection to WebSocket Server")
         this.connection = new WebSocket('ws://localhost:8081')
         
@@ -51,10 +43,9 @@ const app = Vue.createApp({
                 console.log("Your assigned userID: " + this.userId);
             } else if (message.Tokens !== undefined){
 
-                this.tokens = message.Tokens
+                self.data().tokens = message.Tokens
+                // this.tokens = message.Tokens
                 console.log("Tokens: " + this.tokens)
-                // app.setTokens(this.tokens)
-                // app.userTokens(this.tokens)
                 document.getElementById("numTokens").innerText = this.tokens
             }else if (message.Push_State !== undefined) {
 
