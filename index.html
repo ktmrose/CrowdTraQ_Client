@@ -38,8 +38,7 @@
 
             <!-- add more components here -->
             <div v-else>
-                <!-- <p> Tokens: {{ userTokens }}</p>
-                <p id="numTokens"></p> -->
+
                 <dash-board :connection="connection" :tokens="tokens"></dash-board>
             </div>
         </div>
@@ -52,7 +51,7 @@
         <script src="./components/addSong.js"></script>
         <!-- Mount App  -->
         <script>
-            const mountedApp = app.mount('#app')
+            let mountedApp = app.mount('#app')
         </script>
     </body>
 </html>
