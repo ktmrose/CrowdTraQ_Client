@@ -1,5 +1,5 @@
 const app = Vue.createApp({
-    data() {
+    data: function () {
         return {
             roomCodes: [
                 { id: 0, name: 'Default', numUsers: 0} //add time of creation
