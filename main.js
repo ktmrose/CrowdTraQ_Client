@@ -28,6 +28,7 @@ const app = Vue.createApp({
     },
     created: function () {
         let self = this
+        console.log(self)
         console.log("Starting connection to WebSocket Server")
         this.connection = new WebSocket('ws://localhost:8081')
         
