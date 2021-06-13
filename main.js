@@ -46,9 +46,9 @@ const app = Vue.createApp({
 
                 console.log(this)
                 // self.tokens = message.Tokens
-                this.tokens = message.Tokens
+                self.set("tokens", message.Tokens)
                 console.log("Tokens: " + this.tokens)
-                document.getElementById("numTokens").innerText = this.tokens
+                // document.getElementById("numTokens").innerText = this.tokens
             }else if (message.Push_State !== undefined) {
 
                 if (message.Push_State == 0) {
